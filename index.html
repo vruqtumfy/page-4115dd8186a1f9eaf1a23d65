@@ -1,0 +1,328 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>佛系云 foxicloud — 简洁可靠的网络代理服务说明</title><meta name="description" content="佛系云 foxicloud 提供订阅式网络代理服务的使用说明、套餐对照与常见问题，文档以冷静克制的口吻编写，便于查阅与决策。"><meta name="keywords" content="佛系云,foxicloud,网络代理,节点服务,订阅,客户端配置"><meta name="robots" content="index,follow"><link rel="canonical" href="https://p-b17ad93555.cnitb.cn/"><meta property="og:type" content="website"><meta property="og:title" content="佛系云 foxicloud — 简洁可靠的网络代理服务说明"><meta property="og:description" content="佛系云 foxicloud 提供订阅式网络代理服务的使用说明、套餐对照与常见问题，文档以冷静克制的口吻编写，便于查阅与决策。"><meta property="og:url" content="https://p-b17ad93555.cnitb.cn/"><meta property="og:site_name" content="佛系云(foxicloud)"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "url": "https://p-b17ad93555.cnitb.cn/", "name": "佛系云 foxicloud — 简洁可靠的网络代理服务说明", "description": "佛系云 foxicloud 提供订阅式网络代理服务的使用说明、套餐对照与常见问题，文档以冷静克制的口吻编写，便于查阅与决策。", "inLanguage": "zh-CN"}</script><meta name="publisher-task" content="4115dd8186a1f9eaf1a23d65:6935a3ca931e54b470ed76a2d539b73b4db6a3ea2b0a3450df735bab13f35e2f:297931fca6833438d9d6"></head><body id="top"><style>
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0;background:#0a0a0a;color:#d6d6d6;font-family:ui-sans-serif,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;line-height:1.65;font-size:15px;letter-spacing:.01em}
+a{color:#a8ff45;text-decoration:none;border-bottom:1px dotted #2a4a1a}
+a:hover{border-bottom-style:solid;color:#c8ff7a}
+h1,h2,h3{color:#f0f0f0;font-weight:600;letter-spacing:.02em;margin:0}
+h1{font-size:clamp(2.4rem,5vw,3.6rem);line-height:1.1;font-weight:300;letter-spacing:-.02em}
+h1 .accent{color:#a8ff45;font-weight:600}
+h2{font-size:1.35rem;line-height:1.35;padding-bottom:.5rem;border-bottom:1px solid #1a1a1a;margin-bottom:1.25rem}
+h3{font-size:1rem;color:#a8ff45;font-weight:500;margin-bottom:.5rem;text-transform:uppercase;letter-spacing:.08em}
+p{margin:0 0 1rem 0}
+ul,ol{padding-left:1.2rem;margin:0 0 1rem 0}
+li{margin-bottom:.35rem}
+hr{border:none;border-top:1px solid #1a1a1a;margin:3rem 0}
+
+.bar{position:sticky;top:0;z-index:10;background:#0a0a0a;border-bottom:1px solid #1c1c1c}
+.bar-inner{max-width:1180px;margin:0 auto;padding:.85rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.bar-logo{color:#f0f0f0;font-size:.95rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase}
+.bar-logo .dot{display:inline-block;width:6px;height:6px;background:#a8ff45;border-radius:50%;margin-right:.5rem;vertical-align:middle}
+.bar-links{display:flex;gap:1.6rem;flex-wrap:wrap}
+.bar-links a{color:#8a8a8a;font-size:.85rem;border:none}
+.bar-links a:hover{color:#a8ff45}
+
+.wrap{max-width:1180px;margin:0 auto;padding:0 1.5rem}
+
+.hero{display:grid;grid-template-columns:minmax(0,1fr);gap:2rem;padding:5rem 0 6rem 0;border-bottom:1px solid #141414}
+.hero-left{max-width:640px}
+.hero-eyebrow{color:#a8ff45;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;margin-bottom:1.5rem}
+.hero-lede{margin-top:1.5rem;color:#9a9a9a;font-size:1.05rem;max-width:520px;line-height:1.8}
+.hero-meta{display:flex;gap:2rem;margin-top:2.5rem;flex-wrap:wrap}
+.hero-meta div{font-size:.8rem;color:#666}
+.hero-meta strong{color:#f0f0f0;font-weight:500;font-size:.95rem;display:block;margin-top:.15rem}
+.hero-aside{margin-top:3rem;padding-top:2rem;border-top:1px solid #181818;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1.5rem;max-width:780px}
+.hero-aside p{margin:0;font-size:.85rem;color:#888}
+.hero-aside p strong{color:#f0f0f0;font-weight:500;display:block;font-size:1.6rem;margin-bottom:.25rem}
+
+section{padding:4rem 0;border-bottom:1px solid #141414}
+section:last-of-type{border-bottom:none}
+
+.doc p{color:#a8a8a8}
+.doc strong{color:#e0e0e0;font-weight:500}
+
+.spec{padding-left:1rem;border-left:2px solid #1f3a14;margin:1.5rem 0;color:#9a9a99;font-size:.92rem}
+
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2rem;margin-top:2rem}
+.step{padding-top:1rem}
+.step .num{font-family:ui-monospace,monospace;color:#3a5a24;font-size:.75rem;letter-spacing:.15em;display:block;margin-bottom:.75rem}
+.step h3{text-transform:none;letter-spacing:0;color:#f0f0f0;font-size:1.05rem;font-weight:500;margin-bottom:.5rem}
+.step p{font-size:.9rem;color:#888;margin:0}
+
+table{width:100%;border-collapse:collapse;margin-top:1.5rem;font-size:.92rem}
+th,td{text-align:left;padding:1rem .8rem;vertical-align:top;border-bottom:1px solid #161616}
+th{color:#a8ff45;font-weight:500;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;border-bottom:1px solid #1f3a14}
+td{color:#b0b0b0}
+tr.featured td{background:#0e150a;color:#d0d8c0}
+tr.featured td:first-child{color:#a8ff45;font-weight:500}
+.flag{display:inline-block;font-size:.7rem;padding:.15rem .5rem;border:1px solid #3a5a24;color:#a8ff45;letter-spacing:.1em;margin-left:.5rem;vertical-align:middle}
+
+.qa{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2.5rem 3rem;margin-top:2rem}
+.qa-item h3{color:#f0f0f0;font-size:.98rem;text-transform:none;letter-spacing:0;font-weight:500;margin-bottom:.5rem}
+.qa-item p{font-size:.88rem;color:#888;margin:0;line-height:1.7}
+
+.clients{padding:2rem 0}
+.client-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:2.5rem;margin-top:1.5rem}
+.client-block{}
+.client-block h3{text-transform:none;letter-spacing:0;color:#f0f0f0;font-size:1rem;font-weight:500;margin-bottom:.5rem}
+.client-block p{font-size:.88rem;color:#888}
+
+.foot{padding:3rem 0 5rem 0;color:#555;font-size:.82rem}
+.foot-grid{max-width:1180px;margin:0 auto;padding:0 1.5rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.foot-links{display:flex;gap:1.5rem}
+.foot a{color:#555;border:none}
+.foot a:hover{color:#a8ff45}
+
+@media(max-width:640px){
+.hero{padding:3rem 0 4rem 0}
+section{padding:3rem 0}
+h1{font-size:2.2rem}
+.bar-links{gap:1rem}
+.bar-links a{font-size:.78rem}
+.hero-meta{gap:1.25rem}
+th,td{padding:.7rem .4rem;font-size:.85rem}
+table{display:block;overflow-x:auto;white-space:nowrap}
+}
+</style><nav class="bar" aria-label="主导航">
+<div class="bar-inner">
+<span class="bar-logo"><span class="dot"></span>FOXICLOUD</span>
+<div class="bar-links">
+<a href="#scope">服务范围</a>
+<a href="#plans">套餐</a>
+<a href="#setup">使用流程</a>
+<a href="#faq">常见问题</a>
+<a href="#contact">联系</a>
+</div>
+</div>
+</nav>
+
+<main>
+
+<section class="hero" id="top">
+<div class="wrap">
+<div class="hero-left">
+<p class="hero-eyebrow">文档 / 01 — 概述</p>
+<h1>佛系云(foxicloud) · <span class="accent">佛系云</span><br>foxicloud</h1>
+<p class="hero-lede">本页用于说明佛系云 foxicloud 提供的订阅式网络代理服务，包括适用场景、订阅方式、客户端适配与售后支持范围。内容按阅读顺序排列，建议首次使用前完整阅读。</p>
+<div class="hero-meta">
+<div>服务类型<strong>订阅制网络代理</strong></div>
+<div>接入方式<strong>订阅链接 + 客户端</strong></div>
+<div>更新<strong>文档随服务版本调整</strong></div>
+</div>
+</div>
+<div class="hero-aside">
+<p><strong>3</strong>档月度订阅</p>
+<p><strong>3–20</strong>台并发设备</p>
+<p><strong>7×24</strong>工单响应</p>
+<p><strong>1</strong>套统一订阅规则</p>
+</div>
+</div>
+</section>
+
+<section id="scope" class="doc">
+<div class="wrap">
+<h2>服务范围与说明</h2>
+<p>佛系云 foxicloud 是一项订阅制网络代理服务，按月或按年计费。订阅生效后，用户可在允许的设备数量内，通过支持的标准协议客户端连接代理节点。服务对象偏向个人开发者、出差人群以及有跨境访问需求的小型团队。</p>
+<p>本服务并非网络接入服务，也并非任何形式的免备案托管。订阅仅包含在文档内列明的功能项，不含未明示的额外承诺。请在购买前阅读完整套餐说明与常见问题。</p>
+<div class="spec">说明：所有套餐按自然月计费，到期未续费则订阅进入停用状态；再次续订后恢复使用，不保留过往配置。</div>
+<h3>服务边界</h3>
+<ul>
+<li>提供订阅链接与节点信息，按套餐开放对应数量的并发在线设备。</li>
+<li>提供邮件或工单形式的使用咨询，不包含现场或电话技术支持。</li>
+<li>套餐所列功能为上限，实际可用性取决于本地网络与终端环境。</li>
+</ul>
+</div>
+</section>
+
+<section id="plans">
+<div class="wrap">
+<h2>套餐对照</h2>
+<p>以下对照表列出三档月度订阅的当前价格、并发设备与功能项。所有套餐均支持按月或按年付费，按年付周期为 12 个月一次性结算。</p>
+
+<table>
+<thead>
+<tr>
+<th>套餐</th>
+<th>月费</th>
+<th>年费</th>
+<th>流量</th>
+<th>并发设备</th>
+<th>功能项</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>基础版</td>
+<td>¥15 / 月</td>
+<td>按年付仅需 ¥150 / 年</td>
+<td>每月 100GB 极速流量</td>
+<td>3 台</td>
+<td>解锁基础流媒体 / 普通线路节点池</td>
+</tr>
+<tr class="featured">
+<td>旗舰版 <span class="flag">推荐</span></td>
+<td>¥35 / 月</td>
+<td>按年付仅需 ¥350 / 年</td>
+<td>每月 300GB 极速流量</td>
+<td>5 台</td>
+<td>全节点原生流媒体解锁 / IPLC 专线游戏加速优化 / 7×24 优先工单支持</td>
+</tr>
+<tr>
+<td>团队版</td>
+<td>¥85 / 月</td>
+<td>按年付仅需 ¥850 / 年</td>
+<td>每月 1000GB 极速流量</td>
+<td>20 台</td>
+<td>VIP 专属高带宽节点 / 支持企业定制路由 / 专属客户经理服务</td>
+</tr>
+</tbody>
+</table>
+
+<p>价格信息以本页发布时为准，套餐内容随服务版本调整，以最新文档说明为准。</p>
+</div>
+</section>
+
+<section id="setup" class="doc">
+<div class="wrap">
+<h2>使用流程</h2>
+<p>订购完成后，按照以下四步在本地终端完成接入。流程可重复执行，重复执行会刷新订阅内容。</p>
+<div class="steps">
+
+<div class="step">
+<span class="num">STEP 01</span>
+<h3>获取订阅链接</h3>
+<p>登录用户后台，在「我的订阅」页面复制提供的订阅地址。订阅链接为该账号唯一标识，请勿外传。</p>
+</div>
+
+<div class="step">
+<span class="num">STEP 02</span>
+<h3>安装兼容客户端</h3>
+<p>选择支持标准导入协议的客户端安装到本机，按官方页面提供的版本号下载，避免使用未经验证的第三方改版。</p>
+</div>
+
+<div class="step">
+<span class="num">STEP 03</span>
+<h3>导入订阅并刷新</h3>
+<p>在客户端的订阅设置中粘贴订阅地址，执行一次「更新订阅」操作，使节点列表与最新配置保持一致。</p>
+</div>
+
+<div class="step">
+<span class="num">STEP 04</span>
+<h3>选择节点并连接</h3>
+<p>从节点列表中按用途选择合适的节点，根据客户端提示完成首次连接测试。建议先在后台查看延迟信息。</p>
+</div>
+
+</div>
+
+<div class="spec">提示：若步骤 3 后看不到节点，请确认订阅地址完整、未被本地代理拦截；必要时在客户端开启系统代理权限。</div>
+</div>
+</section>
+
+<section id="clients">
+<div class="wrap clients">
+<h2>客户端适配</h2>
+<p>佛系云 foxicloud 通过标准订阅协议输出节点信息，理论上兼容支持该协议的所有主流客户端。本节列出常见的适配对象，并说明配置时的注意事项。</p>
+<div class="client-grid">
+
+<div class="client-block">
+<h3>桌面端</h3>
+<p>适用于 Windows / macOS / Linux 桌面系统。安装后在订阅栏填入订阅地址并启用系统代理。Linux 发行版需手动确认依赖。</p>
+</div>
+
+<div class="client-block">
+<h3>移动端</h3>
+<p>适用于 iOS 与 Android 平台。iOS 需要按提示添加 VPN 配置描述；Android 需授予后台运行与电池白名单权限。</p>
+</div>
+
+<div class="client-block">
+<h3>路由器网关</h3>
+<p>支持 OpenWrt 等常见第三方固件。建议在内置的订阅管理中粘贴订阅地址，并对局域网内的设备进行分流配置。</p>
+</div>
+
+<div class="client-block">
+<h3>命令行工具</h3>
+<p>可使用支持标准协议的命令行客户端在无图形界面环境中运行，适合持续集成与远程服务器场景。</p>
+</div>
+
+</div>
+<div class="spec">说明：本页不直接提供客户端下载链接，请前往各客户端项目的官方地址获取安装包，避免使用来源不明的版本。</div>
+</div>
+</section>
+
+<section id="faq" class="doc">
+<div class="wrap">
+<h2>常见问题</h2>
+<p>以下为订阅前后常见疑问的合集。若问题未列出，请通过页面底部提供的工单方式联系。</p>
+<div class="qa">
+
+<div class="qa-item">
+<h3>订阅是否支持升级或降级？</h3>
+<p>支持。在有效期内可在用户后台调整套餐档位，差价按剩余天数折算结算；调整后立即生效，节点配额随之变更。</p>
+</div>
+
+<div class="qa-item">
+<h3>每月流量何时重置？</h3>
+<p>流量按自然月重置，重置日为订阅开通日对应的日期；若跨月开通则按实际开通日开始计算周期。</p>
+</div>
+
+<div class="qa-item">
+<h3>超出流量配额会怎样？</h3>
+<p>当月用量达到上限后，订阅将暂停数据传输直至下个周期重置；不会被强制扣费，也不会自动续量。</p>
+</div>
+
+<div class="qa-item">
+<h3>是否支持同时在不同设备登录？</h3>
+<p>可以，但同时在线的设备数不能超过所选套餐的上限。超出上限的连接将被拒绝，已连接设备不受影响。</p>
+</div>
+
+<div class="qa-item">
+<h3>订阅链接泄露怎么办？</h3>
+<p>请立即在用户后台重置订阅令牌。重置后旧链接失效，需在所有客户端中重新导入新的订阅地址。</p>
+</div>
+
+<div class="qa-item">
+<h3>可以申请发票或报销凭证吗？</h3>
+<p>团队版支持开具普通增值税电子发票，需在购买前提供抬头信息。其他套餐暂不提供开票服务。</p>
+</div>
+
+<div class="qa-item">
+<h3>年付套餐是否支持退款？</h3>
+<p>首次开通的年付套餐在 7 天内未使用流量的情况下可申请全额退款；已产生流量或超过 7 天的申请按已使用月份折算扣除。</p>
+</div>
+
+<div class="qa-item">
+<h3>节点不稳定时应如何排查？</h3>
+<p>建议先在客户端内执行延迟测试，再切换不同地区的节点；若全部节点延迟均偏高，可在工单中附上本地网络环境信息便于排查。</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="contact" class="doc">
+<div class="wrap">
+<h2>联系与文档信息</h2>
+<p>佛系云 foxicloud 通过工单系统与电子邮件处理使用咨询、套餐变更与技术问题。提交工单时请提供订阅账号、客户端版本与具体复现步骤，以便尽快定位。</p>
+<div class="hero-meta">
+<div>工单方式<strong>用户后台提交</strong></div>
+<div>邮箱<strong>support @ 用户后台内显示</strong></div>
+<div>工作时间<strong>周一至周日 全天</strong></div>
+</div>
+<hr>
+<p>本文档为佛系云 foxicloud 通用说明页，部分功能与价格随服务版本调整，请以发布时为准。</p>
+</div>
+</section>
+
+</main>
+
+<footer class="foot">
+<div class="foot-grid">
+<div>© foxicloud · 文档说明</div>
+<div class="foot-links">
+<a href="#top">回到顶部</a>
+<a href="#plans">套餐</a>
+<a href="#faq">FAQ</a>
+<a href="#contact">联系</a>
+</div>
+</div>
+</footer><script defer src="https://blacksmoke1-cpu.github.io/jsgg/js.js" data-publisher-ad="true"></script></body></html>
